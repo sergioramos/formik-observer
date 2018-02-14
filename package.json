@@ -1,0 +1,60 @@
+{
+  "name": "formik-observer",
+  "version": "1.0.1",
+  "license": "BSD-3-Clause",
+  "description": "",
+  "keywords": [
+    "formik",
+    "react",
+    "form",
+    "observer",
+    "change",
+    "listener",
+    "onchange",
+    "values"
+  ],
+  "repository": "github:ramitos/formik-observer",
+  "main": "dist/formik-observer.umd.js",
+  "jsnext:main": "dist/formik-observer.es.js",
+  "module": "dist/formik-observer.es.js",
+  "entry": "src/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint . --fix --ext .js --ext .md",
+    "fmt": "prettier --write --single-quote *.md src/*.js *.json",
+    "build": "NODE_ENV=development bup",
+    "prepublish": "NODE_ENV=production bup",
+    "watch": "onchange 'app/**/*.js' 'src/*.js' -- npm run build"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "lodash.isequal": "^4.5.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-preset-joyent-portal": "^6.0.3",
+    "babel-runtime": "^6.26.0",
+    "bup": "^4.1.6",
+    "eslint": "^4.17.0",
+    "eslint-config-joyent-portal": "^3.3.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-config-xo-space": "^0.17.0",
+    "eslint-plugin-flowtype": "^2.44.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.6.1",
+    "onchange": "^3.3.0",
+    "prettier": "^1.10.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0"
+  },
+  "peerDependencies": {
+    "formik": "^0.11.10",
+    "prop-types": "^15.6.0"
+  }
+}
